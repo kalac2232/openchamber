@@ -1,5 +1,5 @@
 import React from 'react';
-import { RiRadioButtonFill, RiRadioButtonLine } from '@remixicon/react';
+import { RiRadioButtonFill, RiCheckboxBlankCircleLine } from '@remixicon/react';
 import { cn } from '@/lib/utils';
 
 interface RadioProps {
@@ -62,7 +62,7 @@ export const Radio = React.memo<RadioProps>(function Radio({
       {checked ? (
         <RiRadioButtonFill className={cn('size-4 text-primary', iconClassName)} />
       ) : (
-        <RiRadioButtonLine className={cn('size-4', iconClassName)} />
+        <RiCheckboxBlankCircleLine className={cn('size-4', iconClassName)} />
       )}
     </button>
   );

@@ -970,7 +970,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
 
     const assistantTopPaddingClass = !isUser && shouldShowHeader
         ? (stickyUserHeader ? (isMobile ? 'pt-4' : 'pt-6') : 'pt-0')
-        : 'pt-0';
+        : 'pt-8';
     const userMessageRadius = 'var(--radius-lg)';
 
     return (
@@ -979,7 +979,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
                 className={cn(
                     'group w-full',
                     isUser ? (isMobile ? 'pt-2' : 'pt-6') : assistantTopPaddingClass,
-                    isUser ? 'pb-0' : isFollowedByAssistant ? 'pb-0' : 'pb-8'
+                    isUser ? 'pb-0' : isFollowedByAssistant ? 'pb-0' : 'pb-0'
                 )}
                 id={`message-${message.info.id}`}
                 data-message-id={message.info.id}

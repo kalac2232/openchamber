@@ -60,6 +60,14 @@ function SelectContent({
 }: React.ComponentProps<typeof SelectPrimitive.Content> & {
   fitContent?: boolean;
 }) {
+  React.useEffect(() => {
+    return () => {
+      if (typeof document !== 'undefined') {
+        document.body.style.pointerEvents = '';
+      }
+    };
+  }, []);
+
   return (
     <SelectPrimitive.Portal>
     <SelectPrimitive.Content
